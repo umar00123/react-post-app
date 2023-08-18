@@ -1,13 +1,86 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.facebookPost {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  box-shadow: 0px 0px 5px gray;
+  border-radius: 15px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.postHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 1rem;
+  object-fit: cover;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.postDate {
+  color: #555;
+}
+
+.postImage {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  margin-top: 1rem;
+}
+
+.postButtons button {
+  margin-right: 0.5rem;
+  padding: 0.25rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.postButtons button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Media Queries for Desktop View */
+@media (min-width: 768px) {
+  .facebookPost {
+    max-width: 600px;
+    margin: 1rem auto;
+    padding: 1rem;
+  }
+}
+
+.postButtons {
+  display: flex;
+  justify-content: space-between;
+  /* Buttons evenly spaced */
+  margin-top: 1rem;
+  /* Add some space above buttons */
+}
+
+.postButtons button {
+  flex: 1;
+  /* Distribute available space among buttons */
+  padding: 0.5rem;
+  /* Add padding to buttons */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  /* You can adjust font size */
+  background-color: #f0f0f0;
+}
+
+.postButtons button:last-child {
+  margin-left: 1rem;
+  /* Add space between buttons */
 }
